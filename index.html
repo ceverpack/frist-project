@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>京西商城后台管理系统-首页</title>
+	<link rel="stylesheet" type="text/css" href="libs/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<script type="text/javascript" src="libs/jquery/jquery-3.2.1.js"></script>
+	<script type="text/javascript" src="libs/bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<nav class="navbar navbar-default navbar-inverse">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      
+      <a class="navbar-brand" href="/day25/shop-project">京西商城后台管理系统</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="javascript:;">首页</a></li>
+        <li><a href="javascript:;">其他页面</a></li>
+        
+      </ul>
+      <ul class="nav navbar-nav navbar-right before-sign" id="before-sign">
+        <li><a href="html/login.html">登录</a></li>
+        <li><a href="html/register.html">注册</a></li>
+      </ul>
+      <ul id="signin" class="nav navbar-nav navbar-right signin">
+        <li><a href="javascript:;">欢迎您，<span id="sign-name"></span></a></li>
+        <li><a id="signout" href="javascript:;">退出</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<div class="main">
+	<button class="btn btn-primary btn-add" data-toggle="modal" data-target="#addModal">录入商品</button>
+	<div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button id="close-btn" type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title" id="myModalLabel">录入商品信息</h4>
+	      </div>
+	      <div class="modal-body">
+	        <form class="form-horizontal">
+			  <div class="form-group">
+			    <label for="inputname" class="col-sm-2 control-label">商品名称</label>
+			    <div class="col-sm-10">
+			      <input type="text" class="form-control" id="inputname" placeholder="请输入商品名称">
+			    </div>
+			  </div>
+			  <div class="form-group">
+			    <label for="inputprice" class="col-sm-2 control-label">商品价格</label>
+			    <div class="col-sm-10">
+			      <input type="number" class="form-control" id="inputprice" placeholder="请输入商品价格">
+			    </div>
+			  </div>
+			  <div class="form-group">
+			    <label for="inputnum" class="col-sm-2 control-label">库存数量</label>
+			    <div class="col-sm-10">
+			      <input type="number" class="form-control" id="inputnum" placeholder="请输入库存数量">
+			    </div>
+			  </div>
+			 
+			</form>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+	        <button id="btn" type="button" class="btn btn-primary">录入</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<table class="table table-bordered">
+  		<thead>
+  			<tr>
+  				<th>编号</th>
+  				<th>商品名称</th>
+  				<th>商品价格</th>
+  				<th>库存数量</th>
+  				<th>操作</th>
+  			</tr>
+  		</thead>
+  		<tbody id="tbody">
+  			<!-- <tr>
+  				<td>1</td>
+  				<td><span>水杯</span><input type="text"></td>
+  				<td><span>100</span><input type="text"></td>
+  				<td><span>100</span><input type="text"></td>
+  				<td>
+  					<button class="btn btn-primary btn-xs btn-edit">编辑</button>
+  					<button class="btn btn-danger btn-xs btn-del">删除</button>
+  					<button class="btn btn-success btn-xs btn-ok">确定</button>
+  					<button class="btn btn-warning btn-xs btn-cancel">取消</button>
+  				</td>
+  			</tr> -->
+  		</tbody>
+	</table>
+	<nav aria-label="Page navigation">
+		<ul class="pagination" id="pagination">
+			<li>
+				<a class="prev" href="#" aria-label="Previous">
+					<span class="prev" aria-hidden="true">&laquo;</span>
+				</a>
+			</li>
+			<!-- <li class="active"><a href="#">1</a></li>
+			<li><a href="#">2</a></li>
+			<li><a href="#">3</a></li>
+			<li><a href="#">4</a></li>
+			<li><a href="#">5</a></li> -->
+			<li id="nextPage">
+				<a class="next" href="#" aria-label="Next">
+					<span class="next" aria-hidden="true">&raquo;</span>
+				</a>
+			</li>
+		</ul>
+	</nav>
+</div>
+<script type="text/javascript" src="libs/tools.js"></script>
+<script type="text/javascript" src="js/isLogin.js"></script>
+<script type="text/javascript" src="js/shop.js"></script>
+</body>
+</html>

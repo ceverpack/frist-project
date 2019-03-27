@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Page Title</title>
+    <link rel="stylesheet" href="../libs/bootstrap/css/bootstrap.min.css">
+    <script src="../libs/jquery/jquery-3.2.1.js"></script>
+    <script src="../libs/bootstrap/js/bootstrap.min.js"></script>
+    <style>
+        .container{width: 80%;}
+        .container tfoot{height: 39px;}
+        table .input {display: none;}
+        table .btn-ok, table .btn-cancel{display: none;}
+        .edit input {display: inline-block;}
+        .edit span {display: none;}
+        .edit .btn-ok, .edit .btn-cancel{display: inline-block;}
+        .edit .btn-edit, .edit .btn-del{display: none;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>购物车</h1>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <td>全选:<input type="checkbox"></td>
+                    <td>商品名称</td>
+                    <td>商品价格</td>
+                    <td>数量</td>
+                    <td>操作</td>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+                <!-- <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <button class="btn btn-primary btn-xs btn-edit">编辑</button>
+                        <button class="btn btn-danger btn-xs btn-del">删除</button>
+                        <button class="btn btn-success btn-xs btn-ok">确定</button>
+                        <button class="btn btn-warning btn-xs btn-cancel">取消</button>          
+                    </td>
+                </tr> -->
+            </tbody>
+            <tfoot>
+                <tr>
+                <td colspan="5">
+                    总价：<span id="total"></span>
+                </td>
+                </tr>
+           </tfoot>
+        </table>
+    </div>
+    <script src="../js/shopcar.js"></script>
+</body>
+</html>
